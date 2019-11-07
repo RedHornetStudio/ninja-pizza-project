@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    background: rgb(197, 197, 197);
+}
+
+#main-screen{
+    max-width: 1920px;
+    margin: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Navigation menu */
+ul.navigation {
+    list-style-type: none;
+    background-color: #333333;
+    margin: 0px;
+    padding: 0px;
+}
+
+li.navigation {
+    float: left;
+    width: 17%;
+}
+
+a.navigation {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+a.navigation:hover {
+    background: rgb(73, 73, 73);
+}

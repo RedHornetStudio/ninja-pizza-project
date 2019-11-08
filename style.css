@@ -15,6 +15,14 @@ body {
 }
 
 /* Navigation menu */
+a.brand {
+    border: 1px solid red;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+
 ul.navigation {
     list-style-type: none;
     background-color: #333333;

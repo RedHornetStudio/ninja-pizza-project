@@ -9,6 +9,7 @@
     <div id="main-screen">
         <header>
             <nav>
+                <a href="" class="brand">Ninja Pizza</a>
                 <ul class="navigation clearfix">
                     <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">HOME</a></li>
                     <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">NEWS</a></li>

@@ -8,12 +8,6 @@ body {
     margin: auto;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
 /* Navigation menu */
 a.brand {
     border: 1px solid red;
@@ -28,11 +22,6 @@ ul.navigation {
     background-color: #333333;
     margin: 0px;
     padding: 0px;
-}
-
-li.navigation {
-    float: left;
-    width: 17%;
 }
 
 a.navigation {

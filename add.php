@@ -1,9 +1,11 @@
 <?php 
 
-    if(isset($_POST['email'])) {
-        echo $_POST['email'];
-        echo $_POST['title'];
-        echo $_POST['ingridients'];
+    if(isset($_POST['email'])){
+        if(empty($_POST['email']) || trim($_POST['email']) == "" ||
+        empty($_POST['title']) || trim($_POST['title']) == "" ||
+        empty($_POST['ingridients']) || trim($_POST['ingridients']) == "") {
+            echo 'Fill in all fields';
+        }
     }
 
 ?>
@@ -28,5 +30,4 @@
         </form>
 
     <?php include('templates/footer.php'); ?>
-    
 </html>

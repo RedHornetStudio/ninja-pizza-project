@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ninja Pizza</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div id="main-screen">

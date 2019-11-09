@@ -9,13 +9,8 @@
     <div id="main-screen">
         <header>
             <nav>
+                <a href="" class="btn-add-pizza"><span class="plus">+</span><span class="add-a-pizza"></span></a>
                 <a href="" class="brand">Ninja Pizza</a>
-                <ul class="navigation clearfix">
-                    <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">HOME</a></li>
-                    <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">NEWS</a></li>
-                    <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">CONTACT</a></li>
-                    <li class="navigation"><a class="navigation" href="https://www.w3schools.com/default.asp">ABOUT</a></li>
-                </ul>
             </nav>
         </header>
     </div>

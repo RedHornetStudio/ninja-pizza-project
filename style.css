@@ -3,35 +3,75 @@ body {
     background: rgb(197, 197, 197);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 #main-screen{
     max-width: 1920px;
     margin: auto;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 /* Navigation menu */
+nav {
+    overflow: hidden;
+    background: white;
+    height: auto;
+}
+
 a.brand {
-    border: 1px solid red;
     display: block;
-    margin: auto;
-    text-decoration: none;
-    color: white;
-}
-
-ul.navigation {
-    list-style-type: none;
-    background-color: #333333;
-    margin: 0px;
-    padding: 0px;
-}
-
-a.navigation {
-    display: block;
+    width: 200px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
     text-align: center;
-    padding: 15px;
     text-decoration: none;
-    color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #cbb09c;
 }
 
-a.navigation:hover {
-    background: rgb(73, 73, 73);
+a.btn-add-pizza {
+    display: block;
+    float: right;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    background: #cbb09c;
+    color: white;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+a.btn-add-pizza:hover {
+    background: #8f7a68;
+}
+
+@media (min-width: 750px) {
+    span.add-a-pizza::after {
+        content: "ADD A PIZZA";
+        margin-left: -10px;
+    }
+
+    span.plus {
+        visibility: hidden;
+    }
+}
+
+/* footer */
+div.copyright {
+    border: 1px solid red;
+    text-align: center;
+    margin: 20px;
+    color: white;
 }

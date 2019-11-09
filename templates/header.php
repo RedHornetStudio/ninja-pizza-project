@@ -9,8 +9,8 @@
     <div id="main-screen">
         <header>
             <nav>
-                <a href="" class="btn-add-pizza"><span class="plus">+</span><span class="add-a-pizza"></span></a>
-                <a href="" class="brand">Ninja Pizza</a>
+                <a href="add.php" class="btn-add-pizza"><button><span class="plus">+</span><span class="add-a-pizza"></span></button></span></a>
+                <a href="index.php" class="brand">Ninja Pizza</a>
             </nav>
         </header>
     </div>

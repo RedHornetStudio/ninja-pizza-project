@@ -26,7 +26,6 @@ body {
 h2 {
     text-align: center;
     color: #a1a1a1;
-    font-family: "Lucida Sans", sans-serif;
 }
 
 button {
@@ -54,7 +53,7 @@ nav {
     height: auto;
 }
 
-a.brand {
+#brand {
     display: block;
     width: 150px;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -65,6 +64,10 @@ a.brand {
     margin-top: 20px;
     margin-bottom: 20px;
     color: #cbb09c;
+}
+
+#brand:focus {
+    outline: none;
 }
 
 a.btn-add-pizza {
@@ -109,6 +112,7 @@ input {
     border-bottom: 2px solid #a1a1a1;
     width: 100%;
     margin: auto;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 

@@ -1,9 +1,9 @@
 <?php 
 
-    $errors = ['email' => '', 'title' => '', 'ingridients' => ''];
+    $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
     $email = '';
     $title = '';
-    $ingridients = '';
+    $ingredients = '';
 
     if(isset($_POST['email'])) {
         $email = trim($_POST['email']);
@@ -24,15 +24,29 @@
             }
         }
 
-        $ingridients = trim($_POST['ingridients']);
-        if(empty($ingridients)) {
-            $errors['ingridients'] = 'an ingridients list is required <br/>';
+        $ingredients = trim($_POST['ingredients']);
+        if(empty($ingredients)) {
+            $errors['ingredients'] = 'an ingredients list is required <br/>';
         } else {
-            if(!preg_match("/^([a-zA-Z\s]+)(,[a-zA-Z\s]*)*$/", $ingridients)) {
-                $errors['ingridients'] = 'invalid ingridients <br/>';
+            if(!preg_match("/^([a-zA-Z\s]+)(,[a-zA-Z\s]*)*$/", $ingredients)) {
+                $errors['ingredients'] = 'invalid ingredients <br/>';
             }
         }
+
+        $isError = false;
+        foreach($errors as $error) {
+            if($error != '') {
+                $isError = true;
+                break;
+            }
+        }
+
+        if(!$isError) {
+            header("Location: index.php");
+        }
     }
+
+    
         
 ?>
 
@@ -55,12 +69,12 @@
                 onfocus="colorLabel(this.id)" onfocusout="unColorLabel(this.id)"
                 value="<?php echo htmlspecialchars($title) ?>">
             <div class="error"><?php echo $errors['title']; ?></div>
-            <label for="ingridients">Ingridients (comma separated):</label>
+            <label for="ingredients">ingredients (comma separated):</label>
             <br/>
-            <input id="ingridients" name="ingridients" type="text" tabindex="3"
+            <input id="ingredients" name="ingredients" type="text" tabindex="3"
                 onfocus="colorLabel(this.id)" onfocusout="unColorLabel(this.id)"
-                value="<?php echo htmlspecialchars($ingridients) ?>">
-            <div class="error" style="margin-bottom:10px;"><?php echo $errors['ingridients']; ?></div>
+                value="<?php echo htmlspecialchars($ingredients) ?>">
+            <div class="error" style="margin-bottom:10px;"><?php echo $errors['ingredients']; ?></div>
             <button type="submit" tabindex="4">SUBMIT</button>
         </form>
 

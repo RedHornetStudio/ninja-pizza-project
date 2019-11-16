@@ -14,4 +14,3 @@
                 <a href="index.php" id="brand" tabindex="-1">Ninja Pizza</a>
             </nav>
         </header>
-    </div>

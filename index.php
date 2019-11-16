@@ -28,7 +28,13 @@
             <div class="col">
                 <div class="pizza">
                     <h3><?php echo htmlspecialchars($pizza['title']); ?></h3>
-                    <p><?php echo htmlspecialchars($pizza['ingredients']); ?></p>
+                    <ul>
+                        <?php foreach(explode(',', $pizza['ingredients']) as $ingredient) { ?>
+                            <?php if(!empty(trim($ingredient))) { ?>
+                                <li><?php echo htmlspecialchars($ingredient); ?> </li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
                     <hr>
                     <button type="button" style="margin-bottom:10px;margin-right:20px;">MORE INFO</button>
                 </div>

@@ -28,6 +28,10 @@ h2, h3, h4, h5, h6 {
     color: #a1a1a1;
 }
 
+hr {
+    border-color: #d6d6d6;
+}
+
 button {
     display: block;
     margin: auto;
@@ -146,6 +150,15 @@ label {
     background: white;
     width: 250px;
     margin: 20px auto;
+}
+
+li {
+    margin: 2px;
+    list-style-type: none;
+}
+
+ul {
+    padding: 0px;
 }
 
 @media (max-width: 1200px) {

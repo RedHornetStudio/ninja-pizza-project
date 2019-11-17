@@ -1,5 +1,7 @@
 <?php 
 
+    include('config/db_connect.php');
+
     $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
     $email = '';
     $title = '';
@@ -19,7 +21,7 @@
         if(empty($title)) {
             $errors['title'] = 'a title is required <br/>';
         } else {
-            if(!preg_match("/^[a-zA-Z]+$/", $title)) {
+            if(!preg_match("/^[a-zA-Z\s]+$/", $title)) {
                 $errors['title'] = 'invalid title <br/>';
             }
         }
@@ -42,7 +44,18 @@
         }
 
         if(!$isError) {
-            header("Location: index.php");
+
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $title = mysqli_real_escape_string($conn, $_POST['title']);
+            $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+
+            $sql = "INSERT INTO pizzas (email, title, ingredients) VALUES ('$email', '$title', '$ingredients')";
+
+            if(mysqli_query($conn, $sql)) {
+                header("Location: index.php");
+            } else {
+                echo "Query error: " . mysqli_error($conn);
+            }
         }
     }
 

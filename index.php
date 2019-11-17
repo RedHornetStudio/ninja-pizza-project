@@ -1,10 +1,6 @@
 <?php
 
-    $conn = mysqli_connect('localhost', 'redhornet', 'redhornet', 'ninja_pizza');
-
-    if(!$conn) {
-        echo "Connection error: " . mysqli_connect_error();
-    }
+    include('config/db_connect.php');
 
     $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY created_at';
 
@@ -14,13 +10,12 @@
 
     mysqli_free_result($result);
 
-    mysqli_close($conn);
+    mysqli_close($conn)
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
     <?php include('templates/header.php'); ?>
         <h2>Pizzas!</h2>
         <section class="clearfix">
@@ -36,7 +31,7 @@
                         <?php } ?>
                     </ul>
                     <hr>
-                    <button type="button" style="margin-bottom:10px;margin-right:20px;">MORE INFO</button>
+                    <a href="details.php?id=<?php echo $pizza['id']; ?>" style="text-decoration:none;"><button type="button" style="margin-bottom:10px;margin-right:20px;">MORE INFO</button></a>
                 </div>
             </div>
             <?php } ?>

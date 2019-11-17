@@ -108,7 +108,7 @@ div.copyright {
 }
 
 /* add pizza form */
-form {
+form.add {
     background: white;
     max-width: 460px;
     margin: auto;
@@ -149,11 +149,11 @@ label {
 }
 
 .pizza {
-    overflow: hidden;
     text-align: center;
     background: white;
     width: 250px;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding-bottom: 1px;
 }
 
 li {
@@ -163,6 +163,10 @@ li {
 
 ul {
     padding: 0px;
+}
+
+.pizza_image {
+    margin-top: -30px;
 }
 
 @media (max-width: 1200px) {

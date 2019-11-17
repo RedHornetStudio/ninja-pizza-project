@@ -69,7 +69,7 @@
     <?php include('templates/header.php'); ?>
 
         <h2>Add a Pizza</h2>
-        <form action="add.php" method="POST">
+        <form class="add" action="add.php" method="POST">
             <label for="email">Your Email:</label>
             <br/>
             <input id="email" name="email" type="text" tabindex="1"

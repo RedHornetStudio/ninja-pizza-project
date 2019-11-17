@@ -4,6 +4,16 @@
 
     include("config/db_connect.php");
 
+    if(isset($_POST['id_to_delete'])) {
+        $id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+        $sql = "DELETE FROM pizzas WHERE id = $id_to_delete";
+        if(mysqli_query($conn, $sql)) {
+            header('Location: index.php');
+        } else {
+            echo 'Query error: ' . mysqli_error($conn);
+        }
+    }
+
     if(isset($_GET['id'])) {
 
         $id = mysqli_real_escape_string($conn, trim($_GET['id']));
@@ -35,6 +45,10 @@
             <h3>Ingredinets: </h3>
             <p><?php echo htmlspecialchars($pizza['ingredients']); ?></p>
         </div>
+        <form action="details.php" method="POST">
+            <input type="hidden" name="id_to_delete" value="<?php echo htmlspecialchars($pizza['id']) ?>">
+            <button type="submit">DELETE</button>
+        </form>
     <?php } else { ?>
         <h2>No such pizza exists!</h2>
     <?php } ?>

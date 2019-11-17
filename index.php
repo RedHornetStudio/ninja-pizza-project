@@ -22,6 +22,7 @@
             <?php foreach($pizzas as $pizza) { ?>
             <div class="col">
                 <div class="pizza">
+                    <img src="img/pizza.svg" alt="pizza" class="pizza_image">
                     <h3><?php echo htmlspecialchars($pizza['title']); ?></h3>
                     <ul>
                         <?php foreach(explode(',', $pizza['ingredients']) as $ingredient) { ?>
@@ -31,7 +32,9 @@
                         <?php } ?>
                     </ul>
                     <hr>
-                    <a href="details.php?id=<?php echo $pizza['id']; ?>" style="text-decoration:none;"><button type="button" style="margin-bottom:10px;margin-right:20px;">MORE INFO</button></a>
+                    <a href="details.php?id=<?php echo $pizza['id']; ?>" style="text-decoration:none;">
+                        <button type="button" style="margin-bottom:10px;margin-right:20px;">MORE INFO</button>
+                    </a>
                 </div>
             </div>
             <?php } ?>

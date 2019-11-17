@@ -8,11 +8,35 @@
 
     $pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    echo json_encode($pizzas);
+    $pizzas_json = json_encode($pizzas);
+    $pizzas_array = json_decode($pizzas_json);
+    //print_r($pizzas);
+    //print_r($pizzas_array);
+
+    foreach($pizzas_array as $pizzaObject) {
+        echo '<li>' . $pizzaObject->title . '</li>';
+    }
+
+    $myObject = new foo;
+    $myObject->changeName('aa');
+    //print_r($myObject);
+
+    //foreach($pizzas_array as $pizza)
 
     mysqli_free_result($result);
 
-    mysqli_close($conn)
+    mysqli_close($conn);
+
+
+    class foo {
+        public $name = 'std';
+        public $id = 23;
+        public $email = 'ff@ff.com';
+
+        function changeName($newName) {
+            $this->name = $newName;
+        }
+    }
 
 ?>
 
